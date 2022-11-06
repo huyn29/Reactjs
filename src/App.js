@@ -1,26 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 // import Huyn from './components/Mycomponent';
-import Huyform from './components/form';
+// import Huyform from './components/form';
+import Father from './components/farcomponent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Learn React with huyn
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {/* <Huyn></Huyn> */}
-        <Huyform></Huyform>
+        <Father></Father>
       </header>
     </div>
   );

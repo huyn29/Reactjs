@@ -1,4 +1,6 @@
 import React from "react";
+import './demo.scss'
+
 class Children extends React.Component{
     state = {
         arrShow:false
@@ -8,23 +10,26 @@ class Children extends React.Component{
             arrShow: !this.state.arrShow
         })
     }
-    handleDelete = () => {
-        alert('click me')
+    handleDelete = (Job) => {
+        this.props.jobDelete(Job)
     }
     render(){
-        console.log(this.props)
+     
         // let ten = this.props.name
         // let tuoi = this.props.age
         let {list} = this.props;
         let {arrShow} = this.state;
-        let check = arrShow === true ? 'arrShow = true' : 'arrShow = false';
-        console.log(check)
+        // let check = arrShow === true ? 'arrShow = true' : 'arrShow = false';
+        
         return(
             <>
                 {/* {arrShow === false && */}
                 {arrShow === false ?
                     <div>
-                        <button onClick={() => this.handleOnClick()}>Show</button>
+                        <button className="bt"
+                            onClick={() => this.handleOnClick()}>
+                            Show
+                        </button>
                     </div>
                 // }
                 // {arrShow === true &&
@@ -36,13 +41,16 @@ class Children extends React.Component{
                                     return(
                                         <div key={item.id}>
                                             {item.title} - {item.salary} <></>
-                                            <span onClick={() => this.handleDelete()}>x</span>
+                                            <span onClick={() => this.handleDelete(item)}>x</span>
                                         </div>
                                     )
                                 })}
                             </div>
                         <div>
-                            <button onClick={() => this.handleOnClick()}>Hide</button>
+                            <button className="bt"
+                                onClick={() => this.handleOnClick()}>
+                                Hide
+                            </button>
                         </div>
                     </>
                 }

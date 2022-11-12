@@ -10,7 +10,6 @@ class Father extends React.Component{
         ]
     }
     changelist = (Job) => {
-        console.log('check farther: ', Job)
         // let currentJob = this.state.arrlist;
         // currentJob.push(Job)
 
@@ -19,12 +18,20 @@ class Father extends React.Component{
             arrlist: [...this.state.arrlist, Job] 
         })
     }
+    jobDelete = (job) =>{
+        let current1Job = this.state.arrlist;
+        current1Job = current1Job.filter(item => item.id !== job.id);
+        this.setState({
+            arrlist: current1Job
+        })
+    }
     render(){
         return(
             <>
                 <Addconponent changelist={this.changelist}></Addconponent>
-                <Children 
+                <Children
                     list={this.state.arrlist}
+                    jobDelete={this.jobDelete}
                 />
             </>
         )  

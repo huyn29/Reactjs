@@ -31,10 +31,8 @@ class Addconponent extends React.Component{
             title: '',
             salary:''
         })
-        console.log('check input',this.state)
     }
     render() {
-        console.log('>>>>>: ', this.state)
         return (
             <>
                 <form >

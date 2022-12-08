@@ -1,0 +1,18 @@
+npx create-react-app <name>
+
+#convert css -> scss
+npm i --save sass
+# Thư viện thông báo
+npm install --save-exact react-toastify@8.0.2
+#Thư viện router
+npm install --save-exact react-router-dom@5.3.0
+#Thư viện axios 
+npm install --save-exact axios@0.21.4
+
+
+# Một function nhận giá trị trả về(return) là một thẻ html <-> jsx
+# Có 2 loại components: 
+ - class component 
+ - function component (function, arrow ): function <name> () {} <=> const <name> = () => {}
+
+#Nếu có 2 div trở lên thì bọc ngoài bằng 1 <React.fragment></React.fragment> nết <v16 hoặc <></> nếu >v16
